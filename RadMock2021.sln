@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadMock2021", "RadMock2021.csproj", "{7F81193E-3795-4D06-8CA1-AC1C59716D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadMock2021", "RadMock2021.csproj", "{7F81193E-3795-4D06-8CA1-AC1C59716D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock2021ConsoleClient", "..\Mock2021ConsoleClient\Mock2021ConsoleClient.csproj", "{EB651612-7A3D-4BD4-8556-772D9A835EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock2021DataLayer", "..\Mock2021DataLayer\Mock2021DataLayer.csproj", "{0D688399-03BE-41FA-ABAA-0FE2F0F14141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock2021WebAPIClientLibrary", "..\Mock2021WebAPIClientLibrary\Mock2021WebAPIClientLibrary.csproj", "{77AA9989-B03C-4C68-9156-862E8684F4DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{7F81193E-3795-4D06-8CA1-AC1C59716D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F81193E-3795-4D06-8CA1-AC1C59716D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F81193E-3795-4D06-8CA1-AC1C59716D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB651612-7A3D-4BD4-8556-772D9A835EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB651612-7A3D-4BD4-8556-772D9A835EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB651612-7A3D-4BD4-8556-772D9A835EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB651612-7A3D-4BD4-8556-772D9A835EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D688399-03BE-41FA-ABAA-0FE2F0F14141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D688399-03BE-41FA-ABAA-0FE2F0F14141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D688399-03BE-41FA-ABAA-0FE2F0F14141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D688399-03BE-41FA-ABAA-0FE2F0F14141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AA9989-B03C-4C68-9156-862E8684F4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AA9989-B03C-4C68-9156-862E8684F4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AA9989-B03C-4C68-9156-862E8684F4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AA9989-B03C-4C68-9156-862E8684F4DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
