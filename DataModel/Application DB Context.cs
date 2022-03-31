@@ -8,6 +8,11 @@ namespace RadMock2021.DataModel
     {
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
+        public Application_DB_Context(DbContextOptions<Application_DB_Context> options)
+          : base(options)
+        {
+
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
             var connectionString = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Rad302Mock_2021";
