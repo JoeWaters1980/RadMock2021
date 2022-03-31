@@ -1,11 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using RadMock2021.DataModel;
 
 namespace RadMock2021
 {
@@ -13,7 +9,24 @@ namespace RadMock2021
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            SeedData(host);
+            host.Run();
+        }
+
+        private static void SeedData(IHost host)
+        {
+            // seed data via DependencyInjection
+            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
+            {
+                // make sure the Seeder has been set up in the Datamodel in webAPI so it call be called here
+                // and then call it in the start up
+                var seed = scope.ServiceProvider.GetService<ApplicationDbSeeder>();
+                seed.Seed().Wait();
+            }
+
+            //throw new NotImplementedException();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

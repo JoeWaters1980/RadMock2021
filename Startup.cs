@@ -1,13 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using RadMock2021.DataModel;
 
 namespace RadMock2021
 {
@@ -23,6 +19,11 @@ namespace RadMock2021
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Seeder Info from datamodel
+            services.AddTransient<ApplicationDbSeeder>();
+            // add the context also for seeding
+            services.AddDbContext<Application_DB_Context>();
+
             services.AddRazorPages();
         }
 
